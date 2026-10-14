@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(2, 2, 2);
+    color: #ffffff;
+    text-align: center;
+    padding: 2vw;
+    margin: 0;
+}
+
+h1 {
+    color: #ff3333;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1vh;
+}
+
+/* Contenedor principal de la grilla ocupando un porcentaje fluido del ancho */
+.cartas-grid {
+    width: 95%;
+    max-width: 1400px;
+    /* Límite máximo para pantallas gigantes */
+    margin: 0 auto;
+}
+
+/* Tarjeta individual totalmente fluida y flexible */
+.carta-card {
+    background-color: #1e1e1e;
+    border: 0.15rem solid #333;
+    /* Borde proporcional */
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Imagen de la carta adaptativa por porcentajes */
+.carta-card img {
+    width: 100%;
+    /* Ocupa el 100% del ancho de su contenedor */
+    max-width: 80%;
+    /* Nunca supera el 80% en pantallas amplias */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
+    border-radius: 0.4rem;
+    margin-bottom: 2%;
+}
+
+/* Título de la carta fluido */
+.carta-card h3 {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    /* Tamaño fluido que evita desbordamientos */
+    color: #ffcc00;
+    margin: 4% 0 2% 0;
+    word-break: break-word;
+}
+
+/* Textos descriptivos internos */
+.carta-card p {
+    margin: 2% 0;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    /* Tamaños de texto adaptativos */
+    color: #ccc;
+}
